@@ -3,24 +3,24 @@
 
 This repository is a dedicated space for learning **C99** from scratch, moving away from high-level abstractions to master manual memory management, pointers, and systems-level architecture.
 
-## 🎯 The Mission
+## 🎯 The Mission:
 The goal is to move from the "what" of web applications to the "how" of computer hardware, eventually building a grid-based pseudo-3D engine inspired by classics like *Dungeon Master* and *Wolfenstein 3D*.
 
-## 🛠 Tech Stack & Environment
+## 🛠 Tech Stack & Environment:
 - **Standard:** C99 (`-std=c99`)
 - **Compiler:** GCC (MinGW-w64 on Windows / WSL2)
 - **Editor:** VS Code + C/C++ Extension Pack
 - **Build Tool:** Make (transitioning from manual CLI commands)
 - **Debugger:** GDB
 
-## 🏗 Project Roadmap
+## 🏗 Project Roadmap:
 - [ ] **Phase 1: The Basics** (Hello World, Variables, Control Flow)
 - [ ] **Phase 2: Memory & Pointers** (The "Paradigm Shock" phase)
 - [ ] **Phase 3: Data Structures** (Structs, Enums, Typedefs)
 - [ ] **Phase 4: File I/O & Assets** (Loading data without libraries)
 - [ ] **Phase 5: The Raycaster** (Grid-based movement & rendering logic)
 
-## ⌨️ Common Commands
+## ⌨️ Common Commands:
 > I'm learning on my Macbook so your commands may vary.
 
 ```bash
@@ -45,8 +45,10 @@ I use visual studio code (vscode) because its lightweight and fast, so there is 
 
 ## References:
 
-- ["C Programming: A Modern Aproash" by K. N. King](https://github.com/Embed-Threads/Learn-C/blob/main/books/c-programming-a-modern-approach-2nbsped-0393979504-9780393979503_compress.pdf)
+The original K&R is for historical reference. The primary books are the other two.
+
 - ["The C Programming Language - Second Edition (K&R)" by Brian W. Kernighan and Dennis M. Ritchie](https://github.com/auspbro/ebook-c/blob/master/The.C.Programming.Language.2Nd.Ed%20Prentice.Hall.Brian.W.Kernighan.and.Dennis.M.Ritchie..pdf)
+- ["C Programming: A Modern Aproash" by K. N. King](https://github.com/Embed-Threads/Learn-C/blob/main/books/c-programming-a-modern-approach-2nbsped-0393979504-9780393979503_compress.pdf)
 - ["21st Century C" by Ben Klemens](https://karadev.net/uroci/filespdf/files/21st-century-c-o-reilly-ben-klemens.pdf)
 
 > copies of the pdfs are in the reference folder
