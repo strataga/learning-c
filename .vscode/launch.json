@@ -3,23 +3,18 @@
     "configurations": [
         {
             "name": "Debug Program",
-            "type": "cppdbg",
+            "type": "lldb",
             "request": "launch",
             "program": "${workspaceFolder}/build/app",
             "args": [],
-            "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
             "preLaunchTask": "Build C Program"
         },
-         {
+        {
             "name": "Debug Current File",
-            "type": "cppdbg",
+            "type": "lldb",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "MIMode": "lldb",
             "preLaunchTask": "Build Current File",
             "cwd": "${workspaceFolder}"
         }

@@ -1,0 +1,9 @@
+{
+    "C_Cpp.intelliSenseEngine": "disabled", // Ensures clangd takes priority
+    "editor.formatOnSave": true, // Keeps your "Dungeon Master" code clean
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+    "files.associations": {
+        "*.h": "c" // Ensures header files are treated as C, not C++
+    },
+    "errorLens.enabled": true // Shows compiler errors inline
+}
