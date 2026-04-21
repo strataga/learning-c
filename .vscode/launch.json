@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "C Launch (LLDB)",
+            "name": "Debug Program",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/app",
@@ -21,7 +21,7 @@
             "program": "${fileDirname}/${fileBasenameNoExtension}",
             "MIMode": "lldb",
             "preLaunchTask": "Build Current File",
-            "cwd": "${workspaceFolder}" // <--- ADD THIS LINE
+            "cwd": "${workspaceFolder}"
         }
     ]
 }

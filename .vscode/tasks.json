@@ -4,22 +4,10 @@
         {
             "label": "Build C Program",
             "type": "shell",
-            "command": "gcc",
-            "args": [
-                "-std=c99",
-                "-Wall",
-                "-g",
-                "${workspaceFolder}/src/main.c",
-                "-o",
-                "${workspaceFolder}/build/app"
-            ],
+            "command": "mkdir -p ${workspaceFolder}/build && gcc -std=c99 -Wall -g ${workspaceFolder}/src/main.c -o ${workspaceFolder}/build/app",
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared"
             }
         },
         {

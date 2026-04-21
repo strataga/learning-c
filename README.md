@@ -41,5 +41,5 @@ gcc -std=c99 -Wall -g src/main.c -o build/app
 
 `-o` - What you want the program file to be named when it compiles.
 
-I use visual studio code (vscode) because its lightweight and fast, so there is a .vscode directory with two files: launch.json and tasks.json. They hold the config on how you want to setup debugging. I prefer setting breakpoints and stepping through code inside vscode. To debug you would hit F5 (or fn+F5), or choose the debugging icon in the side menu (looks like a play button and a bug), and choose the appropriate task in the drop down menu - either a full program or just a file - and hitting the debug play button.
+I use visual studio code (vscode) because its lightweight and fast, so there is a .vscode directory with two files: launch.json and tasks.json. They hold the config on how you want to setup debugging. I prefer setting breakpoints and stepping through code inside vscode. To debug you would hit F5 (or fn+F5), or Cmd + Shift + B to select the task, or choose the debugging icon in the side menu (looks like a play button and a bug), and choose the appropriate task in the drop down menu - either a full program or just a file - and hitting the debug play button.
 
