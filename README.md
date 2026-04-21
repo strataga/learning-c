@@ -43,3 +43,10 @@ gcc -std=c99 -Wall -g src/main.c -o build/app
 
 I use visual studio code (vscode) because its lightweight and fast, so there is a .vscode directory with two files: launch.json and tasks.json. They hold the config on how you want to setup debugging. I prefer setting breakpoints and stepping through code inside vscode. To debug you would hit F5 (or fn+F5), or Cmd + Shift + B to select the task, or choose the debugging icon in the side menu (looks like a play button and a bug), and choose the appropriate task in the drop down menu - either a full program or just a file - and hitting the debug play button.
 
+## References:
+
+- ["C Programming: A Modern Aproash" by K. N. King](https://github.com/Embed-Threads/Learn-C/blob/main/books/c-programming-a-modern-approach-2nbsped-0393979504-9780393979503_compress.pdf)
+- ["The C Programming Language - Second Edition (K&R)" by Brian W. Kernighan and Dennis M. Ritchie](https://github.com/auspbro/ebook-c/blob/master/The.C.Programming.Language.2Nd.Ed%20Prentice.Hall.Brian.W.Kernighan.and.Dennis.M.Ritchie..pdf)
+- ["21st Century C" by Ben Klemens](https://karadev.net/uroci/filespdf/files/21st-century-c-o-reilly-ben-klemens.pdf)
+
+> copies of the pdfs are in the reference folder
