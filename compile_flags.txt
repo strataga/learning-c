@@ -3,5 +3,8 @@
 -Wall
 -Wextra
 -Wpedantic
+-Wshadow
+-Wconversion
+-Werror
 -I/usr/local/include
 -I/Library/Developer/CommandLineTools/usr/include

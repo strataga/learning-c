@@ -29,17 +29,15 @@ brew install gcc
 
 To compile and run a single-file program:
 ```bash
-gcc -std=c99 -Wall -g src/main.c -o build/app
+gcc -g src/main.c -o build/app
 ./build/app
 ```
-
-`-std` - Sets the C standard version. c99 is the defacto standard.
-
-`-Wall` - Enabled most common warning messages - highly recommended to catch logical errors early.
 
 `-g:` - Adds debugging information so you can use tools like GDB to step through your code.
 
 `-o` - What you want the program file to be named when it compiles.
+
+>See the compile_flags.txt pro tip below.
 
 I use visual studio code (vscode) because its lightweight and fast, so there is a .vscode directory with two files: launch.json and tasks.json. They hold the config on how you want to setup debugging. I prefer setting breakpoints and stepping through code inside vscode. To debug you would hit F5 (or fn+F5), or Cmd + Shift + B to select the task, or choose the debugging icon in the side menu (looks like a play button and a bug), and choose the appropriate task in the drop down menu - either a full program or just a file - and hitting the debug play button.
 
@@ -130,14 +128,22 @@ Create a file named compile_flags.txt in your project root.
     -Wall
     -Wextra
     -Wpedantic
+    -Wshadow
+    -Wconversion
+    -Werror
     -I/usr/local/include
     -I/Library/Developer/CommandLineTools/usr/include
     ```
 
     Why these specific flags?
-    - `-xc`: Explicitly tells clangd "this is C code" (sometimes it can get confused with C++).
-    - `-std=c99`: Ensures the linter matches your project's version of C.
-    - `-Wextra` and -Wpedantic: These turn the linter into a "strict mentor." They will warn you about tiny things—like having an extra comma or using a non-standard feature—that might work on your Mac but would crash a Sega Genesis or an old Atari.
-    - `-I...`: These tell clangd where your Mac keeps the "System Headers" (like stdio.h). Without these, you often get those annoying red squiggles under your #include lines even when the code is correct.
+    - `-xc`: Language: C - Explicitly tells clangd "this is C code" (sometimes it can get confused with C++).
+    - `-std=c99`: C99 Standard - Ensures the linter matches your project's version of C.
+    - `-Wall` : Warnings: All - Enables the "standard" set of warnings (e.g., unused variables).
+    - `-Wextra`: Warnings: Extra - Catches subtle logic issues that -Wall misses.
+    - `-Wpedantic`:  Pedantic - Rejects non-standard "shortcuts" and enforces strict C rules.
+    - `-Wshadow`: Shadowing - Warns if you name a variable the same as one in an outer scope.
+    - `-Wconversion`: Type Conversion - Warns if you might lose data (e.g., shoving a big int into a small char).
+    - `-Werror`: Warnings as Errors - (Optional) Forces you to fix every warning before it allows a build.
+    - `-I...`: Include Path - 	Tells the compiler where to look for system headers (like stdio.h).
 
     > make sure to press `CMD + Shift + P`, type `clangd: Restart language server` and select it (or hit enter)
