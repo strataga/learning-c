@@ -2,30 +2,42 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build C Program",
-            "type": "shell",
-            "command": "mkdir -p ${workspaceFolder}/build && gcc -std=c99 -Wall -g ${workspaceFolder}/src/main.c -o ${workspaceFolder}/build/app",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        },
-        {
-            "label": "Build Current File",
+            "label": "Build Main Program",
             "type": "shell",
             "command": "gcc",
             "args": [
+                "-g",
                 "-std=c99",
                 "-Wall",
-                "-g",
-                "${file}", // Compiles the active file
+                "-Wextra",
+                "-Wpedantic",
+                "-Wshadow",
+                "-Wconversion",
+                "-I/usr/local/include",
+                "-I/Library/Developer/CommandLineTools/usr/include",
+                "${workspaceFolder}/src/main.c", 
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}" // Outputs to same folder
+                "${workspaceFolder}/src/main"
             ],
+            "group": "build",
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build and Run",
+            "type": "shell",
+            // The command below builds AND THEN runs the executable
+            "command": "gcc -g -std=c99 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -I/usr/local/include -I/Library/Developer/CommandLineTools/usr/include \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}\" && \"${fileDirname}/${fileBasenameNoExtension}\"",
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": ["$gcc"]
         }
     ]
 }

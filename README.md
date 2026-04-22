@@ -29,7 +29,7 @@ brew install gcc
 
 To compile and run a single-file program:
 ```bash
-gcc -g src/main.c -o build/app
+gcc -o build/app src/main.c
 ./build/app
 ```
 
