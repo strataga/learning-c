@@ -1,10 +1,13 @@
 -xc
 -std=c99
+-O3                # Make the engine fast
 -Wall
 -Wextra
 -Wpedantic
 -Wshadow
 -Wconversion
+-Wdouble-promotion # Warns if you're accidentally using slow 64-bit floats
 -Werror
--I/usr/local/include
+-I./include        # Use relative paths for better portability
+-flto              # Optimizes across multiple .c files (Link-Time Optimization)
 -I/Library/Developer/CommandLineTools/usr/include
